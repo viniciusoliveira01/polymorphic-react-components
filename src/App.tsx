@@ -1,6 +1,10 @@
 import React from "react";
 import { Text } from "./components";
 
+const Emphasis = ({ children }: { children: string }) => {
+  return <em style={{ color: "royalblue" }}>{children}</em>;
+};
+
 function App() {
   return (
     <div className="App">
@@ -10,6 +14,8 @@ function App() {
       <Text as="a" href="www.google.com">
         My ref
       </Text>
+
+      <Text as={Emphasis}>Passing a custom component :D</Text>
     </div>
   );
 }
